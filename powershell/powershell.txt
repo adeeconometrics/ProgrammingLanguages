@@ -1,0 +1,26 @@
+Powershell Basic Syntax - Variables, Objects, and Data Types
+
+Variables
+  syntax: $[var_name]
+          - case-insensitive 
+          - weakly typed
+          - picks up valid data coming from cmdlet
+
+all commands are Verb-Noun structure
+
+
+For-loop syntax: for(($i=0); <condition>; $i++){<statement-list>}
+For-each syntax: foreach($<item> in $<collection>){<statement-list>}
+
+If-statement syntax: if(<condition>){<statement-list>}
+
+Arrays:
+	initalization syntax: [type[]]$<var-name> = <item>, <item>, ... or $<var-name> = <low>..<high>
+	indexing syntax: $<var-name>[]  
+			 range operator: $<var-name>[<low>..<high>]
+			 combination: $<var-name>[1,2+4..6]
+	property: $<var-name>.Count or $<var-name>.Length
+
+
+Arrays: @()
+Hash: @{}

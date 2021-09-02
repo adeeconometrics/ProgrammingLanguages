@@ -1,0 +1,16 @@
+Declaring variables
+	Note - variables are dynamically typed
+	Syntax Declaration: $<var_name> = <value> 
+		Global variables - only accessible outside the function; but can be accessed insi
+	
+
+Functions
+
+
+Conditional Statements
+
+
+Looping Statements
+
+
+Arrays
