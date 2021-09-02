@@ -260,3 +260,19 @@ Methods related to Arrays
         - `ksort()` - ascending order according to key
         - `arsort()` - descending order according to value
         - `krsort()` - descending order according to key
+
+
+#### OOP Grammar
+```
+access_modifiers ::= public | private | protected
+
+class ::= final | abstract | class <class_name> | extends <superclass_name> | implements <interface_name>{}
+method ::= abstract | [access_modifiers] | static | function <function_name> ([parameters]):[return_type]{}
+```
+Note that `abstract` methods can be imlemented inside the context of `abstract` class.
+
+PHP also supports interfaces. Multiple interfaces may be implemented in one class like in Java.
+```
+interface ::= interface <interface_name> | implements <parent_interface> {}
+```
+To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 
