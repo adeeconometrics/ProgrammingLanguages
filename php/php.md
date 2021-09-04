@@ -8,7 +8,7 @@ PHP is a general-purpose scripting language geared for web development. PHP is a
 - supports scoping: `global`, local, and `static` scoping
     - global scope - variables declared outside a function can only be accessed outside the function.
     - local scope - variables declared inside a function (scope) can only be accessed in that context.
-    - static scope - are variables that lives throughout the entire programs (may it be local or not).
+    - static scope - are variables that live throughout the entire program (may it be local or not).
 
 `global` keyword - allows to call global variables inside a function (scope).
 ```PHP
@@ -264,15 +264,29 @@ Methods related to Arrays
 
 #### OOP Grammar
 ```
-access_modifiers ::= public | private | protected
+class ::= final | abstract | class [name::class] | extends [name::superclass] | implements [name::interface] 
+          { [method] | [variable] | [class] }
 
-class ::= final | abstract | class <class_name> | extends <superclass_name> | implements <interface_name>{}
-method ::= abstract | [access_modifiers] | static | function <function_name> ([parameters]):[return_type]{}
+method ::= abstract | [accessor] | static | function [name::function] ([parameter]):[return_type]
+           { [statements] | [expressions] }
+
+statements ::= [expressions] | [statements]
+
+expressions ::= [ternary] | [binary] | [unary] | [value] | [expression]
+
+parameter ::= [type] | [name::parameter] -- = value::default -- | [parameter]
+
+accessor ::= public | private | protected
+
+return_type ::= [type]
+
+name ::= [valid_symbols]
 ```
-Note that `abstract` methods can be imlemented inside the context of `abstract` class.
+
+Note that `abstract` methods can be implemented inside the context of `abstract` class.
 
 PHP also supports interfaces. Multiple interfaces may be implemented in one class like in Java.
 ```
-interface ::= interface <interface_name> | implements <parent_interface> {}
+interface ::= interface [name::interface] | implements [name::parrent_interface] {}
 ```
 To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 

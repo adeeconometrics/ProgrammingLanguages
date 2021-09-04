@@ -1,5 +1,12 @@
 ### Ruby language Overview
 
+[History]
+
+[Features]
+
+[Mostly used in]
+
+---
 #### Variables
 
 ---
@@ -74,66 +81,130 @@ Bitwise Operator
 
 If-clause form:
 ```Ruby
-if <conditional_expr> | <logical_expr>
+if <conditional_expr> | <logical_expr> [then]
     # Block of expressions
 end
 ```
+
 If-Else clause form:
 ```Ruby
-if <conditional_expr> | <logical_expr>
+if <conditional_expr> | <logical_expr> [then]
     # Block of expressions
 else 
     # Block of expressions
 end
 ```
-If-Elsif-Else
+
+If-Elsif-Else:
 ```Ruby
-if <conditional_expr> | <logical_expr>
+if <conditional_expr> | <logical_expr> [then]
     # Block of expressions
-elsif <conditional_expr> | <logical_expr> 
+elsif <conditional_expr> | <logical_expr> [then]
     # Block of expressions
 else 
     # Block of expressions
 end
 ```
-Unless statement
+
+Unless statement:
 ```Ruby
-unless <expr>
+unless <expr> [then]
     # Block of expressions
 else # optional
     # Block of expressions
 end
 ```
-Case statement
+
+Case statement:
 ```Ruby
 case(<expr>)
-    when <expr> # can have multipe when-clause
+    when <expr> [then] # can have multipe when-clause
         # Block of expressions
     else
         # Block of expressions
 end
 ```
 
+---
 #### Looping expressions
 - For-loop
 - While-loop
 - Until-loop
 - Begin-While
 
+For-loop
+```Ruby
+for <variable> [, <variable> ...] in <expr> [do]
+    # Block of expressions
+end
+```
+While-loop
+```Ruby
+while <conditional_expr> [do]
+    # Block of expressions
+end
+```
 
+Until-loop
+```Ruby
+until <conditional_expr> [do]
+    # Block of expressions
+end
+```
 
-- break
-- next
-- redo
-- retry
+- `break` - breaks the loop
+- `next` - jumps current iteration to the next 
+- `redo` - restarts iteration of the loop
+- `retry` - restart from the beginning body in the following espression:
+
+```Ruby
+begin
+   # block of expressions with exception raised
+rescue
+   # handles error
+   retry  # restart from beginning
+end
+```
 
 #### Functions
 ```Ruby
-def method_name ( [arg [= default]]...[, * arg [, &expr ]])
+def method_name (<arguments...>[ = default])
    # Block of expressions
 end
 ```
 #### Arrays
 
+Declaration syntax
+
+```Ruby
+# creating array
+array = Array.new(<size>, <default_value>)
+array = Array.new(<size>)
+array = Array.new()
+array = Array.[](<default__value, ...>)
+array = Array[<default_value, ...>]
+```
+
+Indexing
+```Ruby
+array.at(<index>)
+```
 ---
 ### OOP Grammar
+```
+class ::= class [name::class] | < [name::superclass] | 
+          [accessor] | [methods] | [variables] | [class] | 
+          end
+
+method ::= def [name::method] ([parameters])
+           [expressions]
+           end
+
+parameters ::= [name::parameter] -- = value::default -- | [parameters]
+
+expressions ::= [ternary] | [binary] | [unary] | [expression]
+
+accessor ::= private | public | protected
+
+name ::= [valid_symbols]
+```
