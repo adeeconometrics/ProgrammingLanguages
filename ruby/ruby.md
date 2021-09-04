@@ -29,8 +29,19 @@ Assignment Operators
 | `**=`    | Power          | `a **= b` is same as `a = a**b` | 
 
 
-Comprison Operators 
-
+Comparison Operators 
+| Operator  | Name                                                                                                                                 | Expression              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| `==`      | Equal                                                                                                                                | `(a == b)`              |
+| `!=`      | Not Equal                                                                                                                            | `(a != b)`              |
+| `>`       | Greater Than                                                                                                                         | `(a > b)`               |
+| `<`       | Less Than                                                                                                                            | `(a < b)`               |
+| `>=`      | Greater Than or Equal                                                                                                                | `(a >= b)`              |
+| `<=`      | Less Than or Equal                                                                                                                   | `(a <= b)`              |
+| `===`     | Equality check for Objects.<br>Compares current class with<br>the other object's class.                                              | `(a === b)`             |
+| `<=>`     | Combined Operator.<br>Returns 0 if `a`,`b` are equal.<br>Returns 1 if `a` is greater than `b`.<br>Returns -1 if `a` is less than `b` | `a <=> b`               |
+| `.eql?`   | Checks if it has the same type and value.                                                                                            | `1.eql?(1.0)` is false. |
+| `.equal?` | Checks if the object has the same `id`.                                                                                              | `a.equal?b`             |
 
 
 
@@ -54,11 +65,75 @@ Bitwise Operator
 | `>>`      | Right Shift | `a>>3`     |
 
 ---
-#### Conditional Statements
+#### Conditional expressions
+- If-clause
+- If-Else Clause
+- If-Elsif-Else
+- Unless statement
+- Case statement
 
-#### Looping Statements
+If-clause form:
+```Ruby
+if <conditional_expr> | <logical_expr>
+    # Block of expressions
+end
+```
+If-Else clause form:
+```Ruby
+if <conditional_expr> | <logical_expr>
+    # Block of expressions
+else 
+    # Block of expressions
+end
+```
+If-Elsif-Else
+```Ruby
+if <conditional_expr> | <logical_expr>
+    # Block of expressions
+elsif <conditional_expr> | <logical_expr> 
+    # Block of expressions
+else 
+    # Block of expressions
+end
+```
+Unless statement
+```Ruby
+unless <expr>
+    # Block of expressions
+else # optional
+    # Block of expressions
+end
+```
+Case statement
+```Ruby
+case(<expr>)
+    when <expr> # can have multipe when-clause
+        # Block of expressions
+    else
+        # Block of expressions
+end
+```
+
+#### Looping expressions
+- For-loop
+- While-loop
+- Until-loop
+- Begin-While
+
+
+
+- break
+- next
+- redo
+- retry
 
 #### Functions
-
+```Ruby
+def method_name ( [arg [= default]]...[, * arg [, &expr ]])
+   # Block of expressions
+end
+```
 #### Arrays
 
+---
+### OOP Grammar
