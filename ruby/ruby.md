@@ -206,5 +206,7 @@ expressions ::= [ternary] | [binary] | [unary] | [expression]
 
 accessor ::= private | public | protected
 
-name ::= [valid_symbols]
+name ::= {A-z,a-z}* [numbers]
+
+numbers::= {0-9} | [numbers]
 ```

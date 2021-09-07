@@ -165,7 +165,7 @@ foreach($<array_name> as $<alias_element>){
 ---
 #### Function Declaration
 
-Since PHP 7 Type declarations can be asserted; enabling this will enfore strict tying. The forms we are going to see here are function declarations with loose typing and strict typing. 
+Since PHP 7 Type declarations can be asserted; enabling this will enforce strict tying. The forms we are going to see here are function declarations with loose typing and strict typing. 
 
 loose typing
 ```PHP
@@ -262,17 +262,21 @@ Methods related to Arrays
         - `krsort()` - descending order according to key
 
 
-#### OOP Grammar
+#### PHP Grammar
 ```
 class ::= final | abstract | class [name::class] | extends [name::superclass] | implements [name::interface] 
           { [method] | [variable] | [class] }
 
 method ::= abstract | [accessor] | static | function [name::function] ([parameter]):[return_type]
-           { [statements] | [expressions] }
+           { [statements] | [expression] }
 
-statements ::= [expressions] | [statements]
+statements ::= [expression] | [statements]
 
-expressions ::= [ternary] | [binary] | [unary] | [value] | [expression]
+expression ::= [ternary] | [binary] | [unary] | [value] | [expression]
+
+binary ::=  [expression] | [operator::binary] | [expression]
+
+unary ::= [operator::unary] | [expression]
 
 parameter ::= [type] | [name::parameter] -- = value::default -- | [parameter]
 
@@ -280,7 +284,9 @@ accessor ::= public | private | protected
 
 return_type ::= [type]
 
-name ::= [valid_symbols]
+name ::= {A-z,a-z}* [numbers]
+
+numbers::= {0-9} | [numbers]
 ```
 
 Note that `abstract` methods can be implemented inside the context of `abstract` class.
