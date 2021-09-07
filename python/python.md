@@ -5,7 +5,7 @@
 ### Python Grammar
 
 ```
-class ::= class ([class::superclass, ...]):
+class ::= class [name::claass] ([class::superclass, ...]):
 		[method] | [variable] | pass
 
 method ::= def name::method ([parameter]) -- -> name::type -- :
