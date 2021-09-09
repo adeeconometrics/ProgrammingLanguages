@@ -5,26 +5,26 @@
 ### JavaScript Grammar
 
 ```
-class ::= class [name::class] | extends [name::superclass] {
-		-- constructor([parameters]){[initialization];} --
+class ::= class [name:class] | extends [name:superclass] {
+		-- constructor([parameter]){ [stmt]; } --
 		static | [ [variable] | [method] ] ;
 
-		-- get [name::variable]() {return name::variable; } -- 
-		-- set [name::variable]() {return name::variable; } --
+		-- get [name:variable]() {return name:variable; } -- 
+		-- set [name:variable]() {return name:variable; } --
 	} 
 
-method ::= function [name::method] ([parameters]){
-		[statement] | [method] ;
+method ::= function [name:method] ([parameter]){
+		[stmt]; | [method] 
 		-- return [value]; --
 	}
 
-parameters ::= name::parameter -- = [value::default] -- | [parameters]
+parameter ::= name:parameter -- = [value:default] -- |, [parameter]
 
-statemens ::= [expression] | [statement]
+stmt ::= [expr] | [stmt]
 
-expression ::= [binary] | [unary] | [expression]
+expr ::= [binary] | [unary] | [expr]
 
-variable ::= [ let | var | const ] name::varible
+variable ::= [ let | var | const ] name:varible
 
 types ::= type::primitive | [types]
 
@@ -32,5 +32,7 @@ type::primitive ::= string | number | boolean | null | undefined
 
 name ::= {A-z,a-z}* [numbers]
 
-numbers::= {0-9} | [numbers]
+numbers ::= {0-9} | --$.$-- [numbers]
 ```
+
+<!-- should types be defined in the grammar set? -->

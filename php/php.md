@@ -82,7 +82,7 @@ Logical Operators
 | `!`            | Not  | `!$a`                      |
 
 ---
-#### Conditional Statements
+#### Conditional stmt
 - if-clause 
 - if-else 
 - if-elseif-else
@@ -91,25 +91,25 @@ Logical Operators
 If-clause form:
 ```PHP
 if(<conditional_expr> | <logical_expr>){
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 If-Else clause form:
 ```PHP
 if(<conditional_expr> | <logical_expr>){
-    /*block of statements*/
+    /*block of stmt*/
 } else {
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 If-Elseif-Else
 ```PHP
 if(<conditional_expr> | <logical_expr>){
-    /*block of statements*/
+    /*block of stmt*/
 } elseif (<conditional_expr> | <logical_expr>) {
-    /*block of statements*/
+    /*block of stmt*/
 } else {
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 Switch clause
@@ -125,7 +125,7 @@ switch(<variable>){
 
 ---
 
-#### Looping Statements
+#### Looping stmt
 - while-loop
 - do-while
 - for-loop 
@@ -134,28 +134,28 @@ switch(<variable>){
 While-loop
 ```PHP
 while(<conditaional_expr> | <logical_expr>){
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 
 Do-While
 ```PHP
 do{
-    /*block of statements*/
+    /*block of stmt*/
 } while(<conditaional_expr> | <logical_expr>);
 ```
 
 For-Loop
 ```PHP
 for(<initialization>; <conditional_expr> | <logical_expr>; <increment_expr>){
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 
 For-Each - traverse elements to a block array
 ```PHP
 foreach($<array_name> as $<alias_element>){
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 
@@ -170,7 +170,7 @@ Since PHP 7 Type declarations can be asserted; enabling this will enforce strict
 loose typing
 ```PHP
 function function_name($<params...>){
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 
@@ -184,7 +184,7 @@ If strict typing is enabled, function declaration will be annotated with types. 
 
 ```PHP
 function function_name(<type> $<params...>):<return_type>{
-    /*block of statements*/
+    /*block of stmt*/
 }
 ```
 
@@ -264,21 +264,20 @@ Methods related to Arrays
 
 #### PHP Grammar
 ```
-class ::= final | abstract | class [name::class] | extends [name::superclass] | implements [name::interface] 
-          { [method] | [variable] | [class] }
+class ::= final | abstract | class [name:class] | extends [name:superclass] | implements [name:interface] 
+          { [method] | [variable]; | [class] }
 
-method ::= abstract | [accessor] | static | function [name::function] ([parameter]):[return_type]
-           { [statements] | [expression] }
+method ::= abstract | [accessor] | static | function [name:function] ([parameter]):[return_type]
+           { [stmt] }
 
-statements ::= [expression] | [statements]
+stmt ::= [expr]; | [stmt];
 
-expression ::= [ternary] | [binary] | [unary] | [value] | [expression]
+expr ::= [ternary] | [binary] | [unary] | [value] | [expr]
 
-binary ::=  [expression] | [operator::binary] | [expression]
+    binary ::=  [expr] | [op:binary] | [expr]
+    unary ::= [op:unary] | [expr]
 
-unary ::= [operator::unary] | [expression]
-
-parameter ::= [type] | [name::parameter] -- = value::default -- | [parameter]
+parameter ::= [type] | [name:parameter] -- = value::default -- |, [parameter]
 
 accessor ::= public | private | protected
 
@@ -293,6 +292,6 @@ Note that `abstract` methods can be implemented inside the context of `abstract`
 
 PHP also supports interfaces. Multiple interfaces may be implemented in one class like in Java.
 ```
-interface ::= interface [name::interface] | implements [name::parrent_interface] {}
+interface ::= interface [name:interface] | implements [name:parrent_interface] {}
 ```
 To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 

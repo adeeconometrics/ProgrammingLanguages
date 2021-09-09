@@ -190,19 +190,19 @@ Indexing
 array.at(<index>)
 ```
 ---
-### OOP Grammar
+### Ruby Grammar
 ```
 class ::= class [name::class] | < [name::superclass] | 
           [accessor] | [methods] | [variables] | [class] | 
           end
 
 method ::= def [name::method] ([parameters])
-           [expressions]
+           [expr]
            end
 
 parameters ::= [name::parameter] -- = value::default -- | [parameters]
 
-expressions ::= [ternary] | [binary] | [unary] | [expression]
+expr ::= [ternary] | [binary] | [unary] | [expr]
 
 accessor ::= private | public | protected
 

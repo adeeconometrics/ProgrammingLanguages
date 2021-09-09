@@ -5,28 +5,25 @@
 ### Python Grammar
 
 ```
-class ::= class [name::claass] ([class::superclass, ...]):
+class ::= class [name:claass] ([superclass]):
 		[method] | [variable] | pass
 
-method ::= def name::method ([parameter]) -- -> name::type -- :
-		[statement] | [variable] | [method] | pass
+method ::= def name:method ([parameter]) -- -> name:type -- :
+		[stmt] | [variable] | [method] | pass
 
-parameters ::= name::parameter -- :[name::type] -- -- = [value::default] -- | [parameters]
+parameters ::= name:parameter -- :[name:type] -- -- = [value:default] -- |, [parameter]
 
-statement ::= [expression] | [statement]
+superclass ::= name:superclass -- :[name:type] -- |, [superclass]
 
-expression ::= [binary] | [unary] | [expression] 
+stmt ::= [expr] | [stmt]
 
-binary ::= [expression] [operator::binary] [expression]
+expr ::= [binary] | [unary] | [expr] 
 
-unary ::= [operator::unary] [expression]
+	binary ::= [expr] [op:binary] [expr]
+	unary ::= [op:unary] [expr]
 
 name ::= {A-z,a-z}* [numbers]
 
-numbers::= {0-9} | [numbers]
-
-keyword ::= if | else   | elif  | while    | for | in     | class | def    | and     | or   | is | lambda
-            as | assert | break | continue | del | except | not   | False  | finally | from 
- 	    global | import | None  | nonlocal | not | pass   | raise | return | True    | with | yield 
+numbers::= {0-9} | --_-- [numbers]
 
 ```
