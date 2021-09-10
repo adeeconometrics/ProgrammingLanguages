@@ -277,13 +277,14 @@ expr ::= [ternary] | [binary] | [unary] | [value] | [expr]
     binary ::=  [expr] | [op:binary] | [expr]
     unary ::= [op:unary] | [expr]
 
-parameter ::= [type] | [name:parameter] -- = value::default -- |, [parameter]
+parameter ::= [name:variable] |, [parameter]
 
 accessor ::= public | private | protected
 
 return_type ::= [type]
 
 name ::= {A-z,a-z}* [numbers]
+    name:variable ::= -- [type] -- [name] -- = [value:default] -- ;
 
 numbers::= {0-9} | [numbers]
 ```
