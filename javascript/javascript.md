@@ -30,9 +30,9 @@ types ::= type::primitive | [types]
 
 type::primitive ::= string | number | boolean | null | undefined 
 
-name ::= {A-z,a-z}* [numbers]
+name ::= <A-z,a-z>* -- [numbers] --
 
-numbers ::= {0-9} | --$.$-- [numbers]
+numbers ::= <0-9> | --$.$-- [numbers]
 ```
 
 <!-- should types be defined in the grammar set? -->
