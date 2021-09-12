@@ -22,8 +22,8 @@ expr ::= [binary] | [unary] | [expr]
 	binary ::= [expr] [op:binary] [expr]
 	unary ::= [op:unary] [expr]
 
-name ::= {A-z,a-z}* [numbers]
+name ::= [[a-z,A-Z]]* [numbers]
 
-numbers::= {0-9} | --_-- [numbers]
+numbers::= [[0-9]] | --_-- -$ . $- [numbers]
 
 ```

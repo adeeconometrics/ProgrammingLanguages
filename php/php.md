@@ -283,10 +283,10 @@ accessor ::= public | private | protected
 
 return_type ::= [type]
 
-name ::= <A-z,a-z>* [numbers]
+name ::= [[A-z,a-z]]* [numbers]
     name:variable ::= -- [type] -- [name] -- = [value:default] -- ;
 
-numbers::= <0-9> | [numbers]
+numbers::= [[0-9]] | -$ . $- [numbers]
 ```
 
 Note that `abstract` methods can be implemented inside the context of `abstract` class.

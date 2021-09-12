@@ -206,7 +206,7 @@ expr ::= [ternary] | [binary] | [unary] | [expr]
 
 accessor ::= private | public | protected
 
-name ::= {A-z,a-z}* [numbers]
+name ::= [[A-z,a-z]]* [numbers]
 
-numbers::= {0-9} | [numbers]
+numbers::= [[0-9]] | -$ . $- [numbers]
 ```

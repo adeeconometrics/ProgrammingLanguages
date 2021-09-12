@@ -42,9 +42,9 @@ binary ::= [expression] [operator::binary] [expression]
 
 unary ::= [operator::unary] [expression]
 
-name ::= ${A-z,a-z}* [numbers]
+name ::= $[[A-z,a-z]]* [numbers]
 
-class::name ::= {A-z,a-z}* [numbers]
+class::name ::= [[A-z,a-z]]* [numbers]
 
-numbers::= {0-9} | [numbers]
+numbers::= [[0-9]] | -$ . $-[numbers]
 ```
