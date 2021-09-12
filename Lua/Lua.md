@@ -58,7 +58,7 @@ op ::= [op:unary] | [op:binary]
 
 literal ::= [literal:string] | [literal:number]
     string ::= [[a-z, A-Z, 0-9]] -- [op] | [punctuations] | [character_extensions] -- | [string]
-    number ::= {0-9} | -$.$- [number]
+    number ::= [[0-9]] | -$.$- [number]
 
 ```
 

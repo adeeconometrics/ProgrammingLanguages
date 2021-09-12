@@ -1,5 +1,18 @@
 ### Powershell language Overview
 
+### Features 
+- Interpreted*.
+- Supports Garbage Collection*.
+- Supports Generic Types.
+- Support class-based object-orientation
+- Supports first-class functions.
+- Supports closure.
+
+
+Official Documentation:  https://docs.microsoft.com/en-us/powershell/.
+
+---
+
 Variables
 
 Operators

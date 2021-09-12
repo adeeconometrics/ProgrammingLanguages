@@ -1,5 +1,22 @@
 ### Python Language Overview
 
+- Interpreted.
+- Supports Garbage Collection and Automatic Reference Counting.
+- Supports Generic Programming. 
+- Supports class-based Object-Orientation.
+	- Supports RAII.
+	- Supports multiple inheritance.
+	- Supports abstract class, abstract methods.
+	- Does support have private members.
+- Supports first-class functions.
+- Supports closure. 
+
+### Syntactical features
+- Supports operator overloading. 
+- Supports type annotations.
+- Supports type aliasing.
+
+Official Documentation: https://docs.python.org/3/
 
 ---
 ### Python Grammar

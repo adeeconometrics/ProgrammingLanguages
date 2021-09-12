@@ -2,10 +2,15 @@
 
 - features
 	- compiled or interpreted
+	- support for garbage collection
 	- support for generics
 	- support for object-orientation
+		- RAII
+		- Multiple Inheritance
+		- Abstract class
+		- private members
 	- support for first-class functions
-	- support for clojure
+	- support for closure
 
 - Operators
 

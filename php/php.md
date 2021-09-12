@@ -1,6 +1,24 @@
 ### PHP Overview of the Language
 PHP is a general-purpose scripting language geared for web development. PHP is an interpreted language developed open-source that supports garbage collection. It is intended to handle file systems, communicate with databases, create dynamic page content, and encrypt data. A PHP file can contain HTML, CSS, JavaScript and PHP code with a `*.php` file extension.
 
+
+- Interpreted until PHP 8 (JIT compiler)
+- Does not support generics.
+- Supports class-based Object-Orientation
+    - Supports RAII
+    - Supports abstract class, and abstract methods
+    - Does not support multiple inheritance
+
+- Supports first-class functions.
+- Supports closure.
+
+### Syntactical features
+- Does not support operator overloading. 
+- Supports type annotations.
+- Supports type aliasing.
+
+Official Documentation: https://www.php.net/
+
 ---
 
 #### Variable
