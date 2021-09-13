@@ -21,7 +21,7 @@ Official Documentation: https://docs.python.org/3/
 ---
 ### Python Grammar
 
-```
+```&nbsp;
 
 program ::= [preamble] [stmt]
 
