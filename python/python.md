@@ -43,7 +43,7 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 
 		control:conditional ::= if [expr:conditional]:
 			[stmt]
-		-- elsif [expr:conditional]: --
+		-- elif [expr:conditional]: --
 			-- [stmt] --
 		-- else: -- 
 			-- [stmt] -- 
