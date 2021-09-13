@@ -28,25 +28,25 @@ program ::= [preamble] [stmt]
 stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:class] |[stmt]
 	stmt:control ::= [control:exception] | [control:loop] | [control:conditional] | [control:raise]
 		control:exception ::= try: 
-								[stmt] 
-							   except:
-							   	[stmt]
-							   -- finally: --
-							   -- [stmt] -- 
+			[stmt] 
+		except:
+			[stmt]
+		-- finally: --
+			-- [stmt] -- 
 
 		control:loop ::= [loop:while] | [loop:for]
 			loop:for ::= for [identifier] in [type:iterable]:
-							[stmt]
+				[stmt]
 
 			loop:while ::= while [expr:conditional]:
-							[stmt]
+				[stmt]
 
 		control:conditional ::= if [expr:conditional]:
-									[stmt]
-								-- elsif [expr:conditional]: --
-									-- [stmt] --
-								-- else:
-									-- [stmt] -- 
+			[stmt]
+		-- elsif [expr:conditional]: --
+			-- [stmt] --
+		-- else: -- 
+			-- [stmt] -- 
 
 		control:raise ::= raise [type:exception]
 
