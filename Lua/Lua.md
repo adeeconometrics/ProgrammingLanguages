@@ -17,7 +17,7 @@ program ::= [preamble] [stmt]
 
 stmt ::= [expr] | [stmt:function] | [stmt:class] | [stmt:control] | [stmt]
     class ::=
-    function ::= function [literal:string::name] ( [parameter] )
+    function ::= function [identifier] ( [parameter] )
                     [stmt]
                     -- return [literal] --
                  end
@@ -41,7 +41,7 @@ expr ::= [expr:logical] | [expr:arithmetic] | [expr:comparison] | [expr:assignme
 	logical ::= [expr:logical] [op:binary:logical] [expr:logical] | [op:unary:logical] [expr:logical]
     arithmetic ::= [literal:number] [op:binary:arithmetic] [literal:number] 
     comparison ::= [expr:comparison] [op:binary:comparison] [expr:comparison]
-    assignment ::= [variable] [op:binary:assignment] [expr]
+    assignment ::= [identifier] [op:binary:assignment] [expr]
 
 
 op ::= [op:unary] | [op:binary]
@@ -60,6 +60,7 @@ literal ::= [literal:string] | [literal:number]
     string ::= [[a-z, A-Z, 0-9]] -- [op] | [punctuations] | [character_extensions] -- | [string]
     number ::= [[0-9]] | -$.$- [number]
 
+identifier ::= [literal:string]
 ```
 
 Multiline comments `--[ comment --]`. 

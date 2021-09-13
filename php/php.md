@@ -282,6 +282,10 @@ Methods related to Arrays
 
 #### PHP Grammar
 ```
+program ::= <?php  -- declare(strict_typing = 1); -- 
+    [stmt] 
+    ?>
+
 class ::= final | abstract | class [name:class] | extends [name:superclass] | implements [name:interface] 
           { [method] | [variable]; | [class] }
 
@@ -295,7 +299,7 @@ expr ::= [ternary] | [binary] | [unary] | [value] | [expr]
     binary ::=  [expr] | [op:binary] | [expr]
     unary ::= [op:unary] | [expr]
 
-parameter ::= [name:variable] |, [parameter]
+parameter ::= [identifier] |, [parameter]
 
 accessor ::= public | private | protected
 

@@ -55,7 +55,7 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 		[stmt]
 		-- return -- [stmt:function] | [expr] -- --
 
-	stmt:class ::= class [litera:string::identifier] -- ([type:superclass]) -- :
+	stmt:class ::= class [identifier] -- ([type:superclass]) -- :
 		[stmt]
 
 parameters ::= identifier:parameter -- :[type] -- -- = [value:default] -- |, [parameter]
