@@ -21,7 +21,7 @@ Official Documentation: https://docs.python.org/3/
 ---
 ### Python Grammar
 
-```&nbsp;
+```
 
 program ::= [preamble] [stmt]
 
@@ -52,11 +52,11 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 
 	stmt:assignment ::= [identifier] [op:binary:assignment] [expr]
 	stmt:function ::= def [identifier]([parameters]) -- -> [type] --:
-						[stmt]
-						-- return -- [stmt:function] | [expr] -- --
+		[stmt]
+		-- return -- [stmt:function] | [expr] -- --
 
 	stmt:class ::= class [litera:string::identifier] -- ([type:superclass]) -- :
-					[stmt]
+		[stmt]
 
 parameters ::= identifier:parameter -- :[type] -- -- = [value:default] -- |, [parameter]
 
