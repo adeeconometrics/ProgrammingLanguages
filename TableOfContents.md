@@ -13,7 +13,7 @@
 	- support for closure
 
 - Operators
-
+	- operator precedence  
 - CFG grammar
 
 - type system
