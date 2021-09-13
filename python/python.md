@@ -86,3 +86,28 @@ identifier ::= [[a-z,A-Z]]* [numbers]
 numbers::= [[0-9]] | --_-- -$ . $- [numbers]
 
 ```
+
+---
+### Fundamental Data Types
+Defines the set of built-in data types in Python. 
+
+Numeric Types
+- Integer
+- Float
+- Complex Number
+
+Boolean Types
+- `True`
+- `False`
+- Truthy type - expressions that evaluates to true
+- Falsy type - expressions that evaluates to false
+
+Composite Types
+- Sequence Types 
+	- Tuple
+	- List
+	- String
+- Dictionary
+- Set
+- Files
+- Object
