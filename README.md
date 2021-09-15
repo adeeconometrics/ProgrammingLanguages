@@ -1,9 +1,67 @@
 # ScriptingLanguages
-This repository contains archival collection of programming languages.
+This repository contain a collection of programming languages. It is meant to serve a 
+quick tour on programming languages as well as provide an overview of its features, 
+syntax, and semantics. This repository provide a survey of a programming language 
+in regards to the following areas of concern:
 
-At best, our attempt to capture the syntactical rules of languages may only account to its subset. That said, the aim is to quickly survey languages provide a brief catalogue of its features, type system, and grammatical rules. Code examples and official documentation of such languages will also be provided.  
+- Mostly suited for
+	- systems programming
+	- shell scripting
+	- web development
+	- network programming
+	- machine learning 
+	- application development
+	- back-end development
+	- front-end development
 
-The grammatical construction of a language is described using Simplified Backus-Naur Form (S-BNF). [BNF](https://bityl.co/8eOv) is known as a metasyntax notation that succinctly express the syntactical constructions (rules for grammar) of Context-Free languages. Since most programming languges are context-free, BNF is expressive enough for describing valid syntactical constructions. S-BNF does not mean we reduced the syntactical rules of BNF, it is quite the opposite, S-BNF simplifies and organize syntactical forms by adding more syntactical sugar. 
+- Features
+	- compiled or interpreted
+	- support for garbage collection
+	- support for generics
+	- support for object-orientation
+		- RAII
+		- Multiple Inheritance
+		- Abstract class
+		- Restriction on member access
+	- support for first-class functions
+	- support for closure
+
+- Operators
+	- operator precedence  
+
+- CFG grammar
+
+- type system
+	- reference types
+	- value types
+	- type conversion
+
+- syntactical features
+	- operator overloading
+	- type annotation or type deduction
+	- type aliasing
+
+- official documentation
+
+At best, our attempt to capture the syntactical rules of languages may only account to its 
+subset. The aim is to quickly survey programming languages and provide a brief catalogue 
+of its features, type system, and grammatical rules. Code examples and official 
+documentation of such languages will also be provided.  
+
+The grammatical construction of a language is described using Simplified Backus-Naur Form 
+(S-BNF). [BNF](https://bityl.co/8eOv) is known as a metasyntax notation that succinctly 
+express the syntactical constructions (rules for grammar) of Context-Free languages. Since 
+most programming languges are context-free, BNF is expressive enough for describing valid 
+syntactical constructions. S-BNF does not mean we reduced the syntactical rules of BNF, it 
+is quite the opposite, S-BNF simplifies and organizes syntactical forms by adding more 
+syntactical sugar. 
+
+<br>
+
+### What is added on S-BNF?
+S-BNF defines a notion of scope and references for organizing groups of statements, expressions, operators, and type systems. S-BNF aim to define the syntactical constructions of a programing language with a program. 
+
+
 
 <br>
 
@@ -20,8 +78,7 @@ The grammatical construction of a language is described using Simplified Backus-
 | `::\| `       | denotes single-line comment.                                                   | `::\| comment.`                                                                                                            |
 <br>
 
-**Note:** in special cases where `[` and `]` are necessary, e.g. subscript of an array, we write the corresponding sigils `~[ ]~` to denote that we literally use `[]`.
-
+**Note:** in special cases where `[` and `]` are necessary, e.g. subscript of an array, we write the corresponding signifiers `~[ ]~` are used to denote that we literally use `[]`.
 
 
 ---
