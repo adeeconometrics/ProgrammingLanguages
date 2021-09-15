@@ -1,5 +1,21 @@
 ### JavaScript Language Overview
 
+- Interpreted.
+- Supports Garbage Collection.
+- Supports Metaprogramming. 
+- Supports prototype-based Object-Orientation.
+- Supports first-class functions. 
+- Supports closure. 
+
+
+### Syntactical features:
+- Does not support operator overloading. 
+- Does not support type annotations.* 
+- Does not support type aliasing.*
+
+Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+Standard Language Specification: https://tc39.es/ecma262/
 
 ---
 ### JavaScript Grammar

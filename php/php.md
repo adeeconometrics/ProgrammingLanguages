@@ -315,6 +315,6 @@ Note that `abstract` methods can be implemented inside the context of `abstract`
 
 PHP also supports interfaces. Multiple interfaces may be implemented in one class like in Java.
 ```
-interface ::= interface [name:interface] | implements [name:parrent_interface] {}
+interface ::= interface [name:interface] | implements [name:parent_interface] {}
 ```
 To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 
