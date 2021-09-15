@@ -31,17 +31,17 @@ in regards to the following areas of concern:
 
 - CFG grammar
 
-- type system
+- Type system
 	- reference types
 	- value types
 	- type conversion
 
-- syntactical features
+- Syntactical features
 	- operator overloading
 	- type annotation or type deduction
 	- type aliasing
 
-- official documentation
+- Official documentation
 
 At best, our attempt to capture the syntactical rules of languages may only account to its 
 subset. The aim is to quickly survey programming languages and provide a brief catalogue 
@@ -59,7 +59,9 @@ syntactical sugar.
 <br>
 
 ### What is added on S-BNF?
-S-BNF defines a notion of scope and references for organizing groups of statements, expressions, operators, and type systems. S-BNF aim to define the syntactical constructions of a programing language with a program. 
+S-BNF defines a notion of scope and references for organizing groups of statements, 
+expressions, operators, and describing a type system. S-BNF aim to define the syntactical 
+constructions of a programing language with a program. 
 
 
 
