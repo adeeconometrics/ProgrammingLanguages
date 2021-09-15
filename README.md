@@ -7,16 +7,17 @@ The grammatical construction of a language is described using Simplified Backus-
 
 <br>
 
-| Symbol | Meaning |
-|---|---|
-| `[N] ::= T` | describes the production rule for a non-terminal symbol `N`. |
-| `[N]` | denotes a non-terminal symbol. |
-| `-- value --` | denotes an optional construction that may redefine the meaning of a statement<br>e.g. a paramter that may contain a default value is written as `var -- = value:default --`. |
-| `type:symbol` | denotes a category of non-terminal symbol, <br>e.g. in most languages, expressions may be categorized as unary, binary, or ternary <br>which corresponds to `expr ::= [expr:unary] \| [expr:binary] \| [expr]`. |
-| `\|` | denotes an alternative form that can be derived from non-terminal symbols. |
-| `-$ [op] $-` | means the operator can only be inserted once in the sequence, <br>e.g. a construction of numbers may only have one `.` for denoting decimal values, <br>we may write this in S-BNF as `[number] ::= [[0-9]] \| -$.$- [number]`. |
-| `[[symbol]]*` | means a symbol may be extended indefinately, <br>e.g. an indefinite constructions of `a` maybe written as `a*`, likewise, an indefinite construction <br>of `abc` as in `abcabcabc...` may be written as `[[abc]]*` note that this is different from `[[a,b,c]]*` <br>which can derive `a*`, `b*`, `c*`. Formally, this is known as the Kleene Star operator. |
-| `::\| comment` | denotes single-line comment. |                                                                                                                                                                                                                                                                                                             |
+| Symbol        | Meaning                                                                        | Example                                                                                                                    |
+|---------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `[N] ::= T`   | describes the production rule for a non-terminal symbol `N`.                   | `stmt::=  [expr] \| [stmt]` means that a statement <br>may be constructed with an expression or statements.                |
+| `[N]`         | denotes a non-terminal symbol.                                                 | In the above example, `[stmt]` is a non-terminal <br>symbol that refers to itself.                                         |
+| `-- value --` | denotes an optional construction that may redefine the meaning of a statement. | a paramter that may contain a default <br>value is written as `var -- = value:default --`.                                 |
+| `type:symbol` | denotes a category of non-terminal symbol.                                     | `stmt:control:loop:while` describes a while statement --<br> which is a form of loop, which is a kind of control.          |
+| `type::alias` | denotes an alias of that type which clarifies its intent.                      | `id::variable` is an identifier of a variable.                                                                             |
+| `\|`          | denotes an alternative form that can be derived from non-terminal symbols.     |                                                                                                                            |
+| `-$ [op] $-`  | means the operator can only be inserted once in the sequence,                  | `[number] ::= [[0-9]] \| -$ - $- -$.$- [number]` means a construction of number may be of decimal type or<br>integral type |
+| `[[symbol]]*` | means a symbol may be extended indefinately.                                   | `[[abc]]*` derives constructions for `abcabcabc...` while `[[a,b,c]]*` can derive constructions for `a*b*c*`.               |
+| `::\| `       | denotes single-line comment.                                                   | `::\| comment.`                                                                                                            |
 <br>
 
 **Note:** in special cases where `[` and `]` are necessary, e.g. subscript of an array, we write the corresponding sigils `~[ ]~` to denote that we literally use `[]`.
