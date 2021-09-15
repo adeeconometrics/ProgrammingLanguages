@@ -35,7 +35,7 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 			-- [stmt] -- 
 
 		control:loop ::= [loop:while] | [loop:for]
-			loop:for ::= for [identifier] in [type:iterable]:
+			loop:for ::= for [id] in [type:iterable]:
 				[stmt]
 
 			loop:while ::= while [expr:conditional]:
@@ -50,17 +50,17 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 
 		control:raise ::= raise [type:exception]
 
-	stmt:assignment ::= [identifier] [op:binary:assignment] [expr]
-	stmt:function ::= def [identifier]([parameters]) -- -> [type] --:
+	stmt:assignment ::= [id] [op:binary:assignment] [expr]
+	stmt:function ::= def [id]([parameters]) -- -> [type] --:
 		[stmt]
 		-- return -- [stmt:function] | [expr] -- --
 
-	stmt:class ::= class [identifier] -- ([type:superclass]) -- :
+	stmt:class ::= class [id] -- ([type:superclass]) -- :
 		[stmt]
 
-parameters ::= identifier:parameter -- :[type] -- -- = [value:default] -- |, [parameter]
+parameters ::= id:parameter -- :[type] -- -- = [value:default] -- |, [parameter]
 
-superclass ::= identifier:superclass |, [superclass]
+superclass ::= id:superclass |, [superclass]
 
 
 expr ::= [expr:logical] | [expr:arithmetic] | [expr:comparison] | [expr:assignment] | [expr]
@@ -82,7 +82,7 @@ op ::= [op:unary] | [op:binary]
         comparison ::= > | < | >= | <= | == | != | is | is not | 
         assignment ::= = | += | -= | *= | /= | //= | %= | **= | >>= | <<= | ^= | &= | |=
 
-identifier ::= [[a-z,A-Z]]* [numbers]
+id ::= [[a-z,A-Z]]* [numbers]
 numbers::= [[0-9]] | --_-- -$ . $- [numbers]
 
 ```
