@@ -1,15 +1,4 @@
-Design philosophy of Pascal
-- Code should close or significantly narrow the semantic gap
-- Every code statement should be a clause in an English-language sentence
-- Pascal program can be thought of as a sentence -- a concatenation of clauses
-- Names of procedures, data structures and variables in Pascal should be easily recognizeable
 
-Design Guidelines:
-- clarity
-- modularity
-- compaction
-- reliability
-- ease of maintenance
 
 FreePascal Official documentation: https://www.freepascal.org/docs.html
 
@@ -54,10 +43,23 @@ stmt ::= [stmt:initialize] | [stmt:assignment] | [stmt:procedure] | [stmt:contro
 				case:statements ::= [id:pack]: [stmt:procedure] | [case:statements]
 				
 id ::= [id:pack]
-	id:pack ::= [id] |, [id:pack]
+	id:pack ::= [id] -- , [id:pack] --
 ```
 
 ---
 Notes: 
 - by default, uninitialized variables contain garbage values, so they should be initialized
 - not sure if you can initialize multiple const values 
+
+The Design philosophy of Pascal
+- Code should close or significantly narrow the semantic gap
+- Every code statement should be a clause in an English-language sentence
+- Pascal program can be thought of as a sentence -- a concatenation of clauses
+- Names of procedures, data structures, and variables in Pascal should be easily recognizeable
+
+Design Guidelines:
+- clarity
+- modularity
+- compaction
+- reliability
+- ease of maintenance

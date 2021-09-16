@@ -13,6 +13,7 @@ in regards to the following areas of concern:
 	- application development
 	- back-end development
 	- front-end development
+	- concurrent programming
 
 - Features
 	- compiled or interpreted
