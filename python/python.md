@@ -31,8 +31,8 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 			[stmt] 
 		except:
 			[stmt]
-		-- finally: --
-			-- [stmt] -- 
+		-- finally: 
+			[stmt] -- 
 
 		control:loop ::= [loop:while] | [loop:for]
 			loop:for ::= for [id] in [type:iterable]:
@@ -43,10 +43,10 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
 
 		control:conditional ::= if [expr:conditional]:
 			[stmt]
-		-- elif [expr:conditional]: --
-			-- [stmt] --
-		-- else: -- 
-			-- [stmt] -- 
+		-- elif [expr:conditional]:
+			[stmt] --
+		-- else: 
+			[stmt] -- 
 
 		control:raise ::= raise [type:exception]
 

@@ -209,21 +209,21 @@ array.at(<index>)
 ---
 ### Ruby Grammar
 ```
-class ::= class [name::class] | < [name::superclass] | 
+class ::= class [id::class] | < [id::superclass] | 
           [accessor] | [methods] | [variables] | [class] | 
           end
 
-method ::= def [name::method] ([parameters])
+method ::= def [id::method] ([parameters])
            [expr]
            end
 
-parameters ::= [name::parameter] -- = value::default -- | [parameters]
+parameters ::= [id::parameter] -- = value::default -- | [parameters]
 
 expr ::= [ternary] | [binary] | [unary] | [expr]
 
 accessor ::= private | public | protected
 
-name ::= [[A-z,a-z]]* [numbers]
+id ::= [[A-z,a-z]]* [numbers]
 
 numbers::= [[0-9]] | -$ . $- [numbers]
 ```

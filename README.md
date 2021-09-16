@@ -77,12 +77,11 @@ constructions of a programing language with a program.
 | `type::alias` | denotes an alias of that type which clarifies its intent.                      | `id::variable` is an identifier of a variable.                                                                             |
 | `\|`          | denotes an alternative form that can be derived from non-terminal symbols.     |                                                                                                                            |
 | `-$ [op] $-`  | means the operator can only be inserted once in the sequence,                  | `[number] ::= [[0-9]] \| -$ - $- -$.$- [number]` means a construction of number may be of decimal type or<br>integral type |
-| `[[symbol]]*` | means a symbol may be extended indefinately.                                   | `[[abc]]*` derives constructions for `abcabcabc...` while `[[a,b,c]]*` can derive constructions for `a*b*c*`.               |
+| `[[symbol]]*` | means a symbol may be extended indefinately.                                   | `[[abc]]*` derives constructions for `abcabcabc...` while `[[a,b,c]]*` can derive constructions for `a*b*c*`.              |
 | `::\| `       | denotes single-line comment.                                                   | `::\| comment.`                                                                                                            |
 <br>
 
 **Note:** in special cases where `[` and `]` are necessary, e.g. subscript of an array, we write the corresponding signifiers `~[ ]~` are used to denote that we literally use `[]`.
-
 
 ---
 ### Common Form of Programming Languages in expressed in S-BNF
@@ -92,17 +91,16 @@ program ::= -- [preamble:generation] -- [stmt] -- [preamble:termination] --
 [stmt] ::= [expr] | [stmt:function] | [stmt:class] | [stmt:control] | [stmt]
 
 [expr] ::= [expr:unary] | [expr:binary] | [expr:ternary] | [expr]
-	expr:unary ::= [op:unary] [expr]
-	expr:binary ::= [expr] [op:binary] [expr]
-	expr:ternary ::= [expr] [op:ternary] [expr] [op:ternary]
+	unary ::= [op:unary] [expr]
+	binary ::= [expr] [op:binary] [expr]
+	ternary ::= [expr] [op:ternary] [expr] [op:ternary]
 
 op ::= [op:unary] | [op:binary] | [op:ternary]
-	op:unary ::= !
-	op:binary ::= [op:binary:logical] | [op:binary:arithmetic] | [op:binary:comparison] | [op:binary:assignment]
+	unary ::= !
+	binary ::= [op:binary:logical] | [op:binary:arithmetic] | [op:binary:comparison] | [op:binary:assignment]
 
 
-literals ::= [string] | [number]
-
-string ::= [[a-z, A-Z, 0-9]] -- [operators] | [punctuations] | [character_extensions] -- | [string]
-number ::= {0-9} | -$.$- [number]
+value ::= [value:string] | [value:number]
+	string ::= [[a-z, A-Z, 0-9]] -- [operators] | [punctuations] | [character_extensions] -- | [string]
+	number ::= [[0-9]] | -$ - $- -$ . $- [number] 
 ```
