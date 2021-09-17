@@ -17,6 +17,7 @@ in regards to the following areas of concern:
 
 - Features
 	- compiled or interpreted
+	- support concurrent programming
 	- support for garbage collection
 	- support for generics
 	- support for object-orientation
