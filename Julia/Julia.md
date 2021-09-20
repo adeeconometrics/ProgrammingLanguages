@@ -1,30 +1,39 @@
 ### Mostly suited for
-	- systems programming
-	- network programming
-	- machine learning 
-	- concurrent programming
+- systems programming
+- network programming
+- machine learning 
+- concurrent programming
 
 ### Features
-	- compiled (JIT compiler)
-	- support concurrent programming
-	- support for garbage collection
-	- support for generics
-	- support for first-class functions
-	- support for closure
+| Feature                      | Status        |
+|------------------------------|---------------|
+| Garbage Collection           | Supported     |
+| Concurrency                  | Supported     |
+| Generics                     | Supported     |
+| Object-Orientation           | Not Supported |
+| Abstract Class               | Not Supported |
+| Abstract Method              | Not Supported |
+| Restriction on Class members | Supported     |
+| Constructor-Destructor pair  | Not Supported |
+| First-Class Function         | Supported     |
+| Closure                      | Supported     |
+| Reference Semantics          | Not Supported |
+| Value Semantics              | Supported     |
+| Type Composition             | Supported     |
 
 ### Operators
-	- operator precedence  
+- operator precedence  
 
 ### CFG grammar
 
 ### Type system
-	- reference types
-	- value types
-	- type conversion
+- reference types
+- value types
+- type conversion
 
 ### Syntactical features
-	- operator overloading
-	- type annotation or type deduction
-	- type aliasing
+- operator overloading
+- type annotation or type deduction
+- type aliasing
 
-- Official documentation
+Official documentation

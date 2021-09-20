@@ -1,33 +1,40 @@
 ### Mostly suited for
-	- web development
-	- network programming
-	- application development
-	- concurrent programming
+- web development
+- network programming
+- application development
+- concurrent programming
 
 ### Features
-	- compiled 
-	- support concurrent programming
-	- support for garbage collection
-	- support for generics
-	- support for object-orientation
-		- Abstract class
-		- Restriction on member access
-	- support for first-class functions
-	- support for closure
+
+| Feature                      | Status        |
+|------------------------------|---------------|
+| Garbage Collection           | Supported     |
+| Concurrency                  | Supported     |
+| Generics                     | Supported     |
+| Object-Orientation           | Supported     |
+| Abstract Class               | Supported     |
+| Abstract Method              | Supported     |
+| Restriction on Class members | Supported     |
+| Constructor-Destructor pair  | Not Supported |
+| First-Class Function         | Supported     |
+| Closure                      |               |
+| Reference Semantics          | Supported     |
+| Value Semantics              | Supported     |
+| Type Composition             | Supported     |
 
 ### Operators
-	- operator precedence  
+- operator precedence  
 
 ### CFG grammar
 
 ### Type system
-	- reference types
-	- value types
-	- type conversion
+- reference types
+- value types
+- type conversion
 
 ### Syntactical features
-	- operator overloading : not supported
-	- type annotation or type deduction : not supported
-	- type aliasing : not supported
+- operator overloading : not supported
+- type annotation or type deduction : not supported
+- type aliasing : not supported
 
-- Official documentation
+Official documentation

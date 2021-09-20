@@ -1,37 +1,41 @@
 ### Mostly suited for
-	- systems programming
-	- network programming
-    - game development
-	- machine learning 
-	- application development
-	- concurrent programming
+- systems programming
+- network programming
+- game development
+- machine learning 
+- application development
+- concurrent programming
 
 ### Features
-	- compiled 
-	- support concurrent programming
-	- support for garbage collection
-	- support for generics
-	- support for object-orientation
-		- RAII
-		- Multiple Inheritance
-		- Abstract class
-		- Restriction on member access
-	- support for first-class functions
-	- support for closure
+| Feature                      | Status        |
+|------------------------------|---------------|
+| Garbage Collection           | Not Supported |
+| Concurrency                  | Supported     |
+| Generics                     | Supported     |
+| Object-Orientation           | Supported     |
+| Abstract Class               | Supported     |
+| Abstract Method              | Supported     |
+| Restriction on Class members | Supported     |
+| Constructor-Destructor pair  | Supported     |
+| First-Class Function         | Supported     |
+| Closure                      | Supported     |
+| Reference Semantics          | Supported     |
+| Value Semantics              | Supported     |
+| Type Composition             | Supported     |
 
 ### Operators
-	- operator precedence  
+- operator precedence  
 
 ### CFG grammar
 
 ### Type system
-	- reference types
-	- value types
-	- type conversion
+- reference types
+- value types
+- type conversion
 
 ### Syntactical features
-	- operator overloading
-	- type annotation or type deduction
-	- type aliasing
+- operator overloading
+- type annotation or type deduction
+- type aliasing
 
-- Official documentation
+Official documentation
