@@ -318,3 +318,9 @@ PHP also supports interfaces. Multiple interfaces may be implemented in one clas
 interface ::= interface [name:interface] | implements [name:parent_interface] {}
 ```
 To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 
+
+---
+### Function and Variables 
+
+PHP supports first-class citizen functions, which means we can compose functions that map into other functions indefinitely. 
+There are different 

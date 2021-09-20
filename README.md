@@ -9,10 +9,9 @@ in regards to the following areas of concern:
 	- shell scripting
 	- web development
 	- network programming
+	- game development
 	- machine learning 
 	- application development
-	- back-end development
-	- front-end development
 	- concurrent programming
 
 - Features
