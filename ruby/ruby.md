@@ -1,27 +1,28 @@
 ### Ruby language Overview
 
-[History]
 
 ### Features
-
-- Interpreted.
-- Supports Garbage Collection. 
-- Supports Generic Programming. 
-- Supports class-based object-orientation. 
-    - Support RAII.
-    - Does not support multiple inheritance. 
-    - Does not support Abstract class or abstract method.
-    - Does not have private members. 
-- Supports first-class functions. 
-- Supports closure.
+| Feature                      | Status        |
+|------------------------------|---------------|
+| Garbage Collection           | Supported     |
+| Concurrency                  | Supported     |
+| Generics                     | Supported     |
+| Object-Orientation           | Supported     |
+| Abstract Class               | Not Supported |
+| Abstract Method              | Not Supported |
+| Restriction on Class members | Not Supported |
+| Constructor-Destructor pair  | Not Supported |
+| First-Class Function         | Supported     |
+| Closure                      | Supported     |
+| Reference Semantics          | Supported*    |
+| Value Semantics              | Supported*    |
+| Type Composition             | Supported     |
 
 ### Syntactical features
 - Supports operator overloading.
 - Supports type annotation (since Ruby 3).
 
 Official documentation: https://www.ruby-lang.org/en/documentation/
-
-[Mostly used in]
 
 ---
 #### Variables

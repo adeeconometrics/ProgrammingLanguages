@@ -1,15 +1,28 @@
 ### Python Language Overview
 
-- Interpreted.
-- Supports Garbage Collection and Automatic Reference Counting.
-- Supports Generic Programming. 
-- Supports class-based Object-Orientation.
-	- Supports RAII.
-	- Supports multiple inheritance.
-	- Supports abstract class, abstract methods.
-	- Does support have private members.
-- Supports first-class functions.
-- Supports closure. 
+### Mostly suited for
+- systems programming
+- web development (back-end)
+- machine learning 
+- application development
+
+### Features
+
+| Feature                      | Status        |
+|------------------------------|---------------|
+| Garbage Collection           | Supported     |
+| Concurrency                  | Supported     |
+| Generics                     | Supported     |
+| Object-Orientation           | Supported     |
+| Abstract Class               | Supported     |
+| Abstract Method              | Supported     |
+| Restriction on Class members | Supported     |
+| Constructor-Destructor pair  | Supported     |
+| First-Class Function         | Supported     |
+| Closure                      | Supported     |
+| Reference Semantics          | Supported     |
+| Value Semantics              | Supported     |
+| Type Composition             | Supported     |
 
 ### Syntactical features
 - Supports operator overloading. 
