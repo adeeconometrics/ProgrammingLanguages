@@ -104,3 +104,10 @@ value ::= [value:string] | [value:number]
 	string ::= [[a-z, A-Z, 0-9]] -- [operators] | [punctuations] | [character_extensions] -- | [string]
 	number ::= [[0-9]] | -$ - $- -$ . $- [number] 
 ```
+
+---
+
+### Note:
+
+As mentioned, our survey are only limited to the set of features we are interested in, other languages may have their own unique set of feature in which
+case is a great opportunity to scour through its official documentation. 
