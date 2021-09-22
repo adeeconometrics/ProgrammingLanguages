@@ -40,40 +40,40 @@ Official Documentation: https://docs.python.org/3/
 program ::= [preamble] [stmt]
 
 stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:class] |[stmt]
-	stmt:control ::= [control:exception] | [control:loop] | [control:conditional] | [control:raise]
-		control:exception ::= try: 
+	control ::= [control:exception] | [control:loop] | [control:conditional] | [control:raise]
+		exception ::= try: 
 			[stmt] 
 		except:
 			[stmt]
 		-- finally: 
 			[stmt] -- 
 
-		control:loop ::= [loop:while] | [loop:for]
+		loop ::= [loop:while] | [loop:for]
 			loop:for ::= for [id] in [type:iterable]:
 				[stmt]
 
 			loop:while ::= while [expr:conditional]:
 				[stmt]
 
-		control:conditional ::= if [expr:conditional]:
+		conditional ::= if [expr:conditional]:
 			[stmt]
 		-- elif [expr:conditional]:
 			[stmt] --
 		-- else: 
 			[stmt] -- 
 
-		control:raise ::= raise [type:exception]
+		raise ::= raise [type:exception]
 
-	stmt:assignment ::= [id] [op:binary:assignment] [expr]
-	stmt:function ::= def [id]([parameters]) -- -> [type] --:
+	assignment ::= [id] [op:binary:assignment] [expr]
+	function ::= def [id]([parameters]) -- -> [type] --:
 		[stmt]
 		-- return -- [stmt:function] | [expr] -- --
 
-	stmt:class ::= class [id] -- ([type:superclass]) -- :
+	class ::= class [id] -- ([type:superclass]) -- :
 		[stmt]
 
-parameters ::= id::parameter -- :[type] -- -- = [value:default] |, [parameter] --
 
+parameters ::= id::parameter -- :[type] -- -- = [value:default] |, [parameter] --
 superclass ::= id::superclass |, [superclass]
 
 
