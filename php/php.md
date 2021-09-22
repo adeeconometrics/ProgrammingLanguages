@@ -40,12 +40,14 @@ program ::= <?php  -- declare(strict_typing = 1); --
 ::| statements and expressions are delimited with semi-colons.
 stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:class] |[stmt]
 	control ::= [control:exception] | [control:loop] | [control:conditional] | [control:raise]
-		exception ::= try: 
+		exception ::= try{
 			[stmt] 
-		except:
+        } catch([id::exception]){
 			[stmt]
-		-- finally: 
-			[stmt] -- 
+        }
+		-- finally{
+			[stmt] 
+        } --
 
 		loop ::= [loop:while] | [loop:do_while] | [loop:for] | [loop:foreach]
 			for ::= for([id::initial]; [expr:conditional]; [id:increment]){
@@ -146,8 +148,3 @@ interface ::= interface [name:interface] | implements [name:parent_interface] {}
 ```
 To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 
 
----
-### Function and Variables 
-
-PHP supports first-class citizen functions, which means we can compose functions that map into other functions indefinitely. 
-There are different 
