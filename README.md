@@ -1,4 +1,4 @@
-# ScriptingLanguages
+# Programming Languages
 This repository contain a collection of programming languages. It is meant to serve a 
 quick tour on programming languages as well as provide an overview of its features, 
 syntax, and semantics. This repository provide a survey of a programming language 
