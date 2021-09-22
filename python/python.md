@@ -6,7 +6,7 @@
 - machine learning 
 - application development
 
-### Features
+### Features Table
 
 | Feature                      | Status        |
 |------------------------------|---------------|

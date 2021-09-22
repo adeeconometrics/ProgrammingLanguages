@@ -4,7 +4,7 @@
 - application development
 - concurrent programming
 
-### Features
+### Features Table
 
 | Feature                      | Status        |
 |------------------------------|---------------|
@@ -37,4 +37,4 @@
 - type annotation or type deduction : not supported
 - type aliasing : not supported
 
-Official documentation
+Official documentation: https://docs.oracle.com/en/java/

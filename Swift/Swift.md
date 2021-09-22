@@ -4,7 +4,7 @@
 - application development
 - concurrent programming
 
-### Features
+### Features Table
 | Feature                      | Status        |
 |------------------------------|---------------|
 | Garbage Collection           | Supported     |

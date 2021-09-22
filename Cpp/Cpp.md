@@ -6,7 +6,7 @@
 - application development
 - concurrent programming
 
-### Features
+### Features Table
 | Feature                      | Status        |
 |------------------------------|---------------|
 | Garbage Collection           | Not Supported |
@@ -38,4 +38,4 @@
 - type annotation or type deduction
 - type aliasing
 
-Official documentation
+Official documentation: https://en.cppreference.com/w/
