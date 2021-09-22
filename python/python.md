@@ -23,6 +23,7 @@
 | Reference Semantics          | Supported     |
 | Value Semantics              | Supported     |
 | Type Composition             | Supported     |
+| Tail-Call Optimization       | Not Supported |
 
 ### Syntactical features
 - Supports operator overloading. 

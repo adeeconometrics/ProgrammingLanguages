@@ -26,6 +26,7 @@ in regards to the following areas of concern:
 		- Restriction on member access
 	- support for first-class functions
 	- support for closure
+	- support for tail-call recursion
 
 - Operators
 	- operator precedence  

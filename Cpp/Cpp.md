@@ -22,7 +22,7 @@
 | Reference Semantics          | Supported     |
 | Value Semantics              | Supported     |
 | Type Composition             | Supported     |
-
+| Tail-Call Optimization       | Supported     |
 ### Operators
 - operator precedence  
 
