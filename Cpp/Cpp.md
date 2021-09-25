@@ -44,16 +44,16 @@ stmt ::= [stmt:class] | [stmt:generic] | [stmt:control] | [stmt:exception] | [st
 
 		class_contents ::= [accessor]:
 				-- [class:method] --
-				-- [class:id] -- | [class_contents]
+				-- [class:field] -- | [class_contents]
 
 			method ::= -- virtual -- [accessor] [type] [id::method] ([parameter]) [method:modifier] {
 				[stmt];
 				-- return [expr] | [function] --
 			} | [method]
 
-				modifier ::= noexcept | const | volatile | && | nothrow
+				modifier ::= noexcept | const | volatile | && | nothrow | final
 		
-			id ::= [accessor] [id] -- ::type -- -- = [value::default]; -- | [id]
+			field ::= [accessor] [id] -- ::type -- -- = [value::default]; -- | [id]
 
 	generic ::= [generic:function] | [generic:class]
 		function ::= template <typename [template_parameter]> [type] [id::function] ([parameters]) {
