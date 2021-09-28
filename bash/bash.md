@@ -51,4 +51,6 @@ op ::= [op:unary] | [op:binary]
     op:binary:arithmetic ::= + | - | * | / | % | = 
     op:binary:boolean ::= -o | -a
 
+id ::= [[a-z,A-Z]]* [numbers]
+numbers::= [[0-9]] | -$ . $- [numbers]
 ```

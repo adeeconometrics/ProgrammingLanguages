@@ -66,26 +66,18 @@ stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:c
                 [stmt]
             } while([expr:conditional]);
 
-		conditional ::= [conditional:switch] | [conditional:if] 
-
-            switch ::= switch([id::variable]){
-                
-                default:
-                    [stmt]
-            }
-                case_stmt ::= case [expr:conditional]:
-                    [stmt]
-                    break; | [case_stmt]
+		conditional ::= [conditional:if] | [conditional:switch] 
             
-            if ::= if ([expr:conditional]){
-                [stmt]
-            }
-            -- elseif ([expr:conditional]){
-                [stmt]
-            } --
-            -- else{
-                [stmt]
-            } -- 
+            if ::= if ([expr:conditional]){ [stmt] }
+            -- [if:elseif] --
+            -- else{ [stmt] } -- 
+
+				elseif ::= else if ([expr:conditional]) {[stmt] } | [elseif]
+
+			switch ::= switch([id]){[switc:case_stmt] }
+				case_stmt ::= case [expr]:
+						[stmt]
+						break; | [case_stmt] | default: [stmt]
 
 	assignment ::= [id] [op:binary:assignment] [expr]
 	function ::= function [id]([parameters]) -- :[type] --{
@@ -146,5 +138,27 @@ PHP also supports interfaces. Multiple interfaces may be implemented in one clas
 ```
 interface ::= interface [name:interface] | implements [name:parent_interface] {}
 ```
-To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the class may be accessed without instantiating the class. 
+To access an instance of class, arrow operator is used `->` e.g. `object->method();`. Note that static methods and properties inside the 
+class may be accessed without instantiating the class. 
 
+- Multiline comments `/* [ comment ...] */`. 
+- Single line comment `// comment`.
+
+### Type System
+- Primitive Types (Scalar Types)
+    - Boolean (`boolean`)
+    - Integer (`integer`)
+    - Float (`float`, `double`)
+    - String (`string`)
+
+- Composite Types (Compound Types)
+    - Array (`Array`)
+        - Indexed array
+        - Associative array
+    - Object (`Object`)
+        - Callable
+        - Iterable
+
+### Code Conventions
+- `camelCase` for naming variables and methods 
+- `PascalCase` for naming classes

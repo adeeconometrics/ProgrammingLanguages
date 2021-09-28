@@ -100,6 +100,7 @@ id ::= [[a-z,A-Z]]* [numbers]
 numbers::= [[0-9]] | --_-- -$ . $- [numbers]
 
 ```
+- Single line comment `# comment`.
 
 ---
 ### Fundamental Data Types

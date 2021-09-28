@@ -63,8 +63,7 @@ literal ::= [literal:string] | [literal:number]
 identifier ::= [literal:string]
 ```
 
-Multiline comments `--[ comment --]`. 
-
-Single line comment `-- comment`.
+- Multiline comments `--[ comment --]`. 
+- Single line comment `-- comment`.
 
 <!-- define variable -->

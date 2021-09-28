@@ -40,11 +40,11 @@ stmt ::= [stmt:class] | [stmt:generic] | [stmt:control] | [stmt:exception] | [st
     class ::= class [id::class] : [class:superclass] {
 		[class_contents]
 	};
-		superclass ::= [accessor] [id::superclass] |, [superclass]
+		superclass ::= [accessor] [id::superclass] --, [superclass] --
 
 		class_contents ::= [accessor]:
 				-- [class:method] --
-				-- [class:field] -- | [class_contents]
+				-- [class:field] -- | [class_contents] | [stmt:class]
 
 			method ::= -- virtual -- [accessor] [type] [id::method] ([parameter]) [method:modifier] {
 				[stmt];
@@ -53,27 +53,32 @@ stmt ::= [stmt:class] | [stmt:generic] | [stmt:control] | [stmt:exception] | [st
 
 				modifier ::= noexcept | const | volatile | && | nothrow | final
 		
-			field ::= [accessor] [id] -- ::type -- -- = [value::default]; -- | [id]
+			field ::= [accessor] [type] [id] -- = [value::default]; -- | [field]
+		
+		accessor ::= public | private | protected 
 
 	generic ::= [generic:function] | [generic:class]
-		function ::= template <typename [template_parameter]> [type] [id::function] ([parameters]) {
+		function ::= template <typename [template_parameter]> [type] [id::function] ([parameters]) [function:modifier] {
 			[stmt]
 			-- return [expr] -- 
 		}
+			modifier ::= noexcept | nothrow | final | &&
 
 		class ::= template <typename [template_parameter]> [stmt:class]
 
 	control ::= [control:conditional] | [control:loop] 
 		conditional ::= [conditional:if] | [conditional:switch]
-	
-			::| else-if stmt must come after if, there may also be a list of else-ifs.
+
 			if ::= if([expr:conditional]){[stmt] }
-				-- else if ([expr:conditional]) {[stmt] } -- 
+				-- [if:elseif] -- 
 				-- else {[stmt] } -- 
-			switch ::= switch(id){[switc:case_stmt] }
+
+				elseif ::= else if ([expr:conditional]) {[stmt] } | [elseif]
+
+			switch ::= switch([id]){[switc:case_stmt] }
 				case_stmt ::= case [expr]:
 						[stmt]
-						break; | [case_stmt]
+						break; | [case_stmt] | default: [stmt]
 		
 		loop ::= [loop:for] | [loop:while] | [loop:do_while]
 			for ::= for([id::initial::value]; [expr:conditional]; [id::increment]){[stmt]; }
@@ -118,6 +123,9 @@ id ::= [[a-z,A-Z]]* [numbers]
 numbers::= [[0-9]] | -$ . $- [numbers]
 ```
 
+- Multiline comments `/* [ comment ...] */`. 
+- Single line comment `// comment`.
+
 **Notes**: The CFG does not fully encapsulate all valid syntactical constructions in C++.
 
 ----
@@ -158,3 +166,7 @@ numbers::= [[0-9]] | -$ . $- [numbers]
 - type aliasing
 
 Official documentation: https://en.cppreference.com/w/
+
+### Code Conventions
+- `snake_case` for naming variables and methods 
+- `PascalCase` for naming classes
