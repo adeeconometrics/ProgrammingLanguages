@@ -256,3 +256,49 @@ Methods related to Arrays
         - `arsort()` - descending order according to value
         - `krsort()` - descending order according to key
 
+---
+## Math Functions in PHP
+
+- `abs([numeric] [id])` - returns absolute value of `[id]` with type `[numeric]`.
+- `ceil([numeric] [id])` - returns a rounded up value of `[id]` with type `[numeric]`.
+- `floor([numeric] [id])` - returns a rounded down value of `id` with type `[numeric]`.
+- `round([numeric] [id])` - rounds a float.
+- `min(array [id]):mixed` - returns min value.
+- `max(array [id]):mixed` - returns max value.
+
+Random generators
+- `rand():int` - returns a random value.
+- `rand(int [id::min], int [id::max]):int` - returns a random value within a given range.
+- `srand(int [id::seed] = 0, int [id::mode] = MT_RAND_MT19937):void` - seeds random generator with `[id::seed]` 
+or with a random value when the seed is `0`.
+- `mt_rand(): int` - generates random value via the Mersenne Twister Random Number generator.
+- `mt_rand(int [id::min], int [id::max]): int` - generates random value via the Mersenne Twister Random Number 
+generator.
+- `mt_srand(int [id::seed] = 0, int [id::mode] = MT_RAND_MT19937): void` - Seeds the random number generator 
+with seed or with a random value if no seed is given..
+
+Trigonometric Functions
+- `sin(float [id]):float`
+- `asin(float [id]):float`
+- `sinh(float [id]):float`
+- `asinh(float [id]):float`
+- `cos(float [id]):float`
+- `acos(float [id]):float`
+- `cosh(float [id]):float`
+- `acosh(float [id]):float`
+- `tan(float [id]):float`
+- `atan(float [id]):float`
+- `tanh(float [id]):float`
+- `atanh(float [id]):float`
+
+Exponential Functions
+- `sqrt(float [id]):float`
+- `pow([numeric] [id::num], [numeric] [id::exponent]): int | float | object`
+- `expr(float [id::num]):float` - calculates exponent of `e` (Euler's number).
+- `log(float [id::num], float [id::base] = M_E):float` - defaults to `e` (Euler's number).
+- `log10(float [id::num]):float`
+- `log1p(float [id::num]): float` - calculates `log(1 + [id::num])`.
+
+<br>
+
+Official documentation of built-in math functions: https://www.php.net/manual/en/ref.math.php
