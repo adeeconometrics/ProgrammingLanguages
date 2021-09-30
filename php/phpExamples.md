@@ -294,7 +294,7 @@ Trigonometric Functions
 Exponential Functions
 - `sqrt(float [id]):float`
 - `pow([numeric] [id::num], [numeric] [id::exponent]): int | float | object`
-- `expr(float [id::num]):float` - calculates exponent of `e` (Euler's number).
+- `exp(float [id::num]):float` - calculates exponent of `e` (Euler's number).
 - `log(float [id::num], float [id::base] = M_E):float` - defaults to `e` (Euler's number).
 - `log10(float [id::num]):float`
 - `log1p(float [id::num]): float` - calculates `log(1 + [id::num])`.
