@@ -17,7 +17,7 @@ Example:
 
 ### Python map
 
-```stmt:map ::= map([stmt:function], [type:iterable])```
+```stmt:map ::= map([stmt:function], *[type:iterable])```
 
 Example:
 ```Python

@@ -165,8 +165,8 @@ numbers::= [[0-9]] | -$ . $- [numbers]
 - type annotation or type deduction
 - type aliasing
 
-Official documentation: https://en.cppreference.com/w/
-
 ### Code Conventions
 - `snake_case` for naming variables and methods 
 - `PascalCase` for naming classes
+
+Official documentation: https://en.cppreference.com/w/
