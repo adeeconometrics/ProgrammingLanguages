@@ -21,34 +21,44 @@ Standard Language Specification: https://tc39.es/ecma262/
 ### JavaScript Grammar
 
 ```
-class ::= class [name:class] | extends [name:superclass] {
+class ::= class [id:class] | extends [id:superclass] {
 		-- constructor([parameter]){ [stmt]; } --
 		static | [ [variable] | [method] ] ;
 
-		-- get [name:variable]() {return name:variable; } -- 
-		-- set [name:variable]() {return name:variable; } --
+		-- set [id:variable]() {return [id:variable]; } --
+		-- get [id:variable]() {return [id:variable]; } -- 
 	} 
 
-method ::= function [name:method] ([parameter]){
+method ::= function [id:method] ([parameter]){
 		[stmt]; | [method] 
 		-- return [value]; --
 	}
 
-parameter ::= name:parameter -- = [value:default] -- |, [parameter]
+parameter ::= id:parameter -- = [value:default] -- |, [parameter]
 
 stmt ::= [expr] | [stmt]
 
 expr ::= [binary] | [unary] | [expr]
 
-variable ::= [ let | var | const ] name:varible
+variable ::= [ let | var | const ] id:varible
 
 types ::= type::primitive | [types]
 
 type::primitive ::= string | number | boolean | null | undefined 
 
-name ::= [[A-z,a-z]]* -- [numbers] --
+id ::= [[A-z,a-z]]* -- [numbers] --
 
 numbers ::= [[0-9]] | --$.$-- [numbers]
 ```
 
+### Type System
+- Primitive Types
+	- string
+	- number
+	- boolean
+	- null
+	- undefined
+- Composite
+	- class
+	
 <!-- should types be defined in the grammar set? -->
