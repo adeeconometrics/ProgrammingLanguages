@@ -1,10 +1,15 @@
 ### Python Language Overview
 
+[toc]
+
 ### Mostly suited for
+
 - systems programming
 - web development (back-end)
 - machine learning 
 - application development
+
+
 
 ### Features Table
 
@@ -32,53 +37,81 @@
 
 Official Documentation: https://docs.python.org/3/
 
+
+
 ---
+
 ### Python Grammar
 
 ```
 
 program ::= [preamble] [stmt]
 
-stmt ::= [expr] | [stmt:control] | [stmt:assignment] | [stmt:function] | [stmt:class] |[stmt]
-	control ::= [control:exception] | [control:loop] | [control:conditional] | [control:raise]
+preamble ::= import [package] as [id] | 
+			 from [package] import [id, ...] as ([id, ...]) | 
+			 import [package]
+
+stmt ::= [expr] | [stmt:control] | [stmt:assignment] | 
+		[stmt:function] | [stmt:class] |[stmt]
+		
+	control ::= [control:exception] | [control:loop] | 
+				[control:conditional] | [control:raise]
+				
 		exception ::= try: 
-			[stmt] 
-		except:
-			[stmt]
-		-- finally: 
-			[stmt] -- 
-
+						[stmt] 
+					[exception:except]
+					-- [exception:else] --
+					-- [exception:finally] --
+					
+		catch ::= except [Exception:type] -- as [id] -- : 
+					[stmt]
+				-- [catch] --
+				
+		else ::= else: 
+					[stmt]
+					
+		finally ::= finally:
+						[stmt]
+						
 		loop ::= [loop:while] | [loop:for]
-			loop:for ::= for [id] in [type:iterable]:
-				[stmt]
+			for ::= for [id] in [type:iterable]:
+						[stmt]
 
-			loop:while ::= while [expr:conditional]:
-				[stmt]
+			while ::= while [expr:conditional]:
+						[stmt]
 
 		conditional ::= if [expr:conditional]:
-			[stmt]
-		-- elif [expr:conditional]:
-			[stmt] --
-		-- else: 
-			[stmt] -- 
+                            [stmt]
+                        -- elif [expr:conditional]:
+                            [stmt] --
+                        -- else: 
+                            [stmt] -- 
 
 		raise ::= raise [type:exception]
 
-	assignment ::= [id] [op:binary:assignment] [expr]
+	assignment ::= [id] [op:binary:assignment] [expr] | 
+					[id,...] [op:binary:assignment] [expr] 
+	
 	function ::= def [id]([parameters]) -- -> [type] --:
-		[stmt]
-		-- return -- [stmt:function] | [expr] -- --
+					[stmt]
+				-- return [expr] --
 
 	class ::= class [id] -- ([type:superclass]) -- :
-		[stmt]
+				[stmt]
 
 
-parameters ::= id::parameter -- :[type] -- -- = [value:default] |, [parameter] --
-superclass ::= id::superclass |, [superclass]
+parameters ::= id::parameter -- = [value:default] |, [parameter] -- 
+				id::parameter:[type] -- = [value:default] |, [parameter] --
+				
+superclass ::= id::superclass -- , [superclass] -- 
 
 
-expr ::= [expr:logical] | [expr:arithmetic] | [expr:comparison] | [expr:assignment] | [expr]
-	logical ::= [expr:logical] [op:binary:logical] [expr:logical] | [op:unary:logical] [expr:logical]
+expr ::= [expr:logical] | [expr:arithmetic] | 
+		[expr:comparison] | [expr:assignment] | [expr]
+		
+	logical ::= [expr:logical] [op:binary:logical] [expr:logical] | 
+				[op:unary:logical] [expr:logical]
+				
     arithmetic ::= [literal:number] [op:binary:arithmetic] [literal:number] 
     comparison ::= [expr:comparison] [op:binary:comparison] [expr:comparison]
     assignment ::= [variable] [op:binary:assignment] [expr]
@@ -89,12 +122,15 @@ op ::= [op:unary] | [op:binary]
         logical ::= not | !
         misc ::= @
 
-	binary ::= [binary:logical] | [binary:arithmetic] | [binary:comparison] | [binary:assignment]
+	binary ::= [binary:logical] | [binary:arithmetic] | 
+				[binary:comparison] | [binary:assignment]
+				
         logical ::= and | or | not
         arithmetic ::=  + | - | * | / | // | % | ** 
 		bitwise ::= >> | << | ^ | & | |
         comparison ::= > | < | >= | <= | == | != | is | is not | 
-        assignment ::= = | += | -= | *= | /= | //= | %= | **= | >>= | <<= | ^= | &= | |=
+        assignment ::= = | += | -= | *= | /= | //= | %= | 
+        				**= | >>= | <<= | ^= | &= | |=
 
 id ::= [[a-z,A-Z]]* [numbers]
 numbers::= [[0-9]] | --_-- -$ . $- [numbers]

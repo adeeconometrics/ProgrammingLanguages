@@ -1,8 +1,9 @@
-### Overview 
+### C++ Overview 
 
-The repository focuses on C++ features. 
+[toc]
 
 ### Mostly suited for
+
 - systems programming
 - network programming
 - game development
@@ -10,7 +11,10 @@ The repository focuses on C++ features.
 - application development
 - concurrent programming
 
+
+
 ### Features Table
+
 | Feature                      | Status        |
 |------------------------------|---------------|
 | Garbage Collection           | Not Supported |
@@ -27,18 +31,29 @@ The repository focuses on C++ features.
 | Value Semantics              | Supported     |
 | Type Composition             | Supported     |
 | Tail-Call Optimization       | Supported     |
-### Operators
-- operator precedence  
+
+
+
+### Syntactical features
+
+- operator overloading
+- type annotation or type deduction
+- type aliasing
+
+Official documentation: https://en.cppreference.com/w/
+
+----
 
 ### CFG grammar
 
 ```
 program ::= [directives] [stmt]; | [directives] [expr];
 
-stmt ::= [stmt:class] | [stmt:generic] | [stmt:control] | [stmt:exception] | [stmt:function] | [stmt:assignment] |  [expr] | [stmt]
+stmt ::= [stmt:class] | [stmt:generic] | [stmt:control] | [stmt:exception] |
+		[stmt:function] | [stmt:assignment] |  [expr] | [stmt]
 	
     class ::= class [id::class] : [class:superclass] {
-		[class_contents]
+		[class:class_contents]
 	};
 		superclass ::= [accessor] [id::superclass] --, [superclass] --
 
@@ -126,7 +141,7 @@ numbers::= [[0-9]] | -$ . $- [numbers]
 - Multiline comments `/* [ comment ...] */`. 
 - Single line comment `// comment`.
 
-**Notes**: The CFG does not fully encapsulate all valid syntactical constructions in C++.
+**Note**: The CFG does not fully encapsulate all valid syntactical constructions in C++.
 
 ----
 
@@ -154,18 +169,18 @@ numbers::= [[0-9]] | -$ . $- [numbers]
             - C-cast: `([type])[id]`
         - C++-style
             - reinterpret cast: `reinterpret_cast<[type]>([expr])`
+            
             - dynamic cast: `dynamic_cast<[type]>([expr])`
+            
             - static cast: `static_cast<[type]>([expr])`
+            
             - const cast: `const_cast<[type]>([expr])`
+            
             - converting constructor
-            - casting opertor
-
-### Syntactical features
-- operator overloading
-- type annotation or type deduction
-- type aliasing
-
-Official documentation: https://en.cppreference.com/w/
+            
+            - casting operator
+            
+              
 
 ### Code Conventions
 - `snake_case` for naming variables and methods 

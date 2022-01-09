@@ -21,19 +21,29 @@
 | Value Semantics              | Supported     |
 | Type Composition             | Supported     |
 
-### Operators
-- operator precedence  
 
-### CFG grammar
-
-### Type system
-- reference types
-- value types
-- type conversion
 
 ### Syntactical features
+
 - operator overloading
 - type annotation or type deduction
 - type aliasing
 
 Official documentation: https://docs.julialang.org/en/v1/
+
+
+
+----
+
+### Julia grammar
+
+```
+```
+
+
+
+### Type system
+
+- reference types
+- value types
+- type conversion
