@@ -177,11 +177,22 @@ numbers::= [[0-9]] | -$ . $- [numbers]
             - const cast: `const_cast<[type]>([expr])`
             
             - converting constructor
+<<<<<<< HEAD
             
             - casting operator
             
               
+=======
+            - casting opertor
+
+### Syntactical features
+- operator overloading
+- type annotation or type deduction
+- type aliasing
+>>>>>>> fca6d1e3468f3ead2a1a26bc3e9a7693977eab22
 
 ### Code Conventions
 - `snake_case` for naming variables and methods 
 - `PascalCase` for naming classes
+
+Official documentation: https://en.cppreference.com/w/
