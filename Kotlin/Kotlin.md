@@ -69,12 +69,11 @@ stmt ::= [expr] | [stmt:control] |
 						for ([id::item] in [expr::range]) {[stmt]} |
 						
 				while ::= while ([expr::boolean]) {[stmt]} |
-						  do {[stmt]} while ([expr::boolean])
+						 while([expr:boolean]) {[stmt]} do {[stmt]}
 			
 			conditional ::= [conditional:if] | [conditional:when]
-				if ::= if (expr::boolean) {[stmt]} |
-						if (expr::boolean) {[stmt]} else {[stmt]} |
-						if (expr::boolean) {[stmt]} [if:elseif] 
+				if ::= if (expr::boolean) {[stmt]} else {[stmt]} |
+					  if (expr::boolean) {[stmt]} [if:elseif] 
 						
 					elseif ::= else if ([expr::boolean]) {[stmt]} -- [elseif] -- |
 								else {[stmt]}
